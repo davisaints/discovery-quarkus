@@ -12,7 +12,7 @@ public class StarWarsResource {
 
     @GET
     @Path("people")
-    public String getStarWarsPeople() {
+    public String getPeople() {
         return service.getPeople();
     }
 }
