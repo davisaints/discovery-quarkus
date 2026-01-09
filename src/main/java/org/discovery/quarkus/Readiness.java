@@ -1,10 +1,10 @@
-package org.acme;
+package org.discovery.quarkus;
 
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-import static org.acme.StarWarsService.FALLBACK_MESSAGE;
+import static org.discovery.quarkus.StarWarsService.FALLBACK_MESSAGE;
 
 @org.eclipse.microprofile.health.Readiness
 public class Readiness implements HealthCheck {
