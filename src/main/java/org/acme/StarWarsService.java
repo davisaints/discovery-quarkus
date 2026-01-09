@@ -12,6 +12,8 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 @RegisterRestClient(baseUri = "https://swapi.info/api")
 public interface StarWarsService {
 
+    public static final String FALLBACK_MESSAGE = "Fallback";
+
     @CircuitBreaker(
         delay = 3000L,
         failureRatio = 0.5,
@@ -27,6 +29,6 @@ public interface StarWarsService {
     @Timeout(value = 3000L)
     String getPeople();
     default String getPeopleFallback() {
-        return "Fallback";
+        return FALLBACK_MESSAGE;
     }
 }
