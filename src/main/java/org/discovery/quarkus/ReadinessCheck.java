@@ -7,7 +7,7 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 import static org.discovery.quarkus.StarWarsService.FALLBACK_MESSAGE;
 
 @org.eclipse.microprofile.health.Readiness
-public class Readiness implements HealthCheck {
+public class ReadinessCheck implements HealthCheck {
 
     @RestClient
     StarWarsService starWarsService;
