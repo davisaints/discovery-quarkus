@@ -2,11 +2,12 @@ package org.discovery.quarkus;
 
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
+import org.eclipse.microprofile.health.Readiness;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import static org.discovery.quarkus.StarWarsService.FALLBACK_MESSAGE;
 
-@org.eclipse.microprofile.health.Readiness
+@Readiness
 public class ReadinessCheck implements HealthCheck {
 
     @RestClient
